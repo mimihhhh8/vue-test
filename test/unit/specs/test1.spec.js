@@ -1,5 +1,18 @@
 import {add,del} from '@/components/test1.js'
 
+/**
+ * 1、describe 描述, decribe会形成一个作用域
+ * 2、it 断言
+ * 3、expect 期望
+ * 4、test 测试，类似it
+ */
+
+/**
+ * expect和should是BDD(Behavior-Driven Development (行为驱动开发))风格的，二者使用相同的链式语言来组织断言，
+ * 但不同在于他们初始化断言的方式：expect使用构造函数来创建断言对象实例，而should通过为Object.prototype新增方
+ * 法来实现断言（所以should不支持IE）；expect直接指向chai.expect，而should则是chai.should()。
+ * 较建议使用expect，should不仅不兼容IE，在某些情况下还需要改变断言方式来填坑。详细的比较可以看看官网Assertion Styles，说的很清楚
+ */
 
 // describe('测试标题', ()=> {
 //   // todo
@@ -110,16 +123,3 @@ it('判断数组中是否包含一个特定对象',()=>{
 
 
 
-/**
- * 1、describe 描述, decribe会形成一个作用域
- * 2、it 断言
- * 3、expect 期望
- * 4、test 测试，类似it
- */
-
-/**
- * expect和should是BDD(Behavior-Driven Development (行为驱动开发))风格的，二者使用相同的链式语言来组织断言，
- * 但不同在于他们初始化断言的方式：expect使用构造函数来创建断言对象实例，而should通过为Object.prototype新增方
- * 法来实现断言（所以should不支持IE）；expect直接指向chai.expect，而should则是chai.should()。
- * 较建议使用expect，should不仅不兼容IE，在某些情况下还需要改变断言方式来填坑。详细的比较可以看看官网Assertion Styles，说的很清楚
- */
