@@ -2,12 +2,12 @@ const path = require('path')
 
 module.exports = {
   rootDir: path.resolve(__dirname, '../../'),
-  moduleFileExtensions: [
+  moduleFileExtensions: [// 告诉jest需要解析的文件
     'js',
     'json',
     'vue'
   ],
-  moduleNameMapper: {
+  moduleNameMapper: {// 别名配置
     '^@/(.*)$': '<rootDir>/src/$1'
   },
   transform: {
@@ -25,5 +25,5 @@ module.exports = {
     '!**/node_modules/**'
   ],
   verbose: true,
-  testURL: "http://localhost/",
+  testURL: 'http://localhost/'
 }

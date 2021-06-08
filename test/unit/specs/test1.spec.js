@@ -1,4 +1,4 @@
-import {add,del} from '@/components/test1.js'
+import {add, del} from '@/components/test1.js'
 
 /**
  * 1、describe 描述, decribe会形成一个作用域
@@ -21,17 +21,15 @@ import {add,del} from '@/components/test1.js'
 //  })
 // })
 
-
 // (1)toBe 相当于===，比较的是内存地址
-// describe('testAdd.js',()=>{
-//   it('测试两数相加',()=>{
-//     expect(add(3, 7)).toBe(10);
-//   })
-//   it('测试两数相减',()=>{
-//     expect(del(7, 3)).toBe(4);
-//   })
-// })
-
+describe('testAdd.js', () => {
+  it('测试两数相加', () => {
+    expect(add(3, 7)).toBe(10)
+  })
+  it('测试两数相减', () => {
+    expect(del(7, 3)).toBe(4)
+  })
+})
 
 // (2) 添加 not 可以表达相反匹配
 // describe('相反匹配',()=>{
@@ -39,7 +37,6 @@ import {add,del} from '@/components/test1.js'
 //     expect(del(7, 3)).not.toBe(2)
 //   })
 // })
-
 
 // (3) 如果测试对象可以使用 toEqual() ，递归检查数组或对象的每个字段
 // describe('测试对象是否相等',()=>{
@@ -49,7 +46,6 @@ import {add,del} from '@/components/test1.js'
 //     expect(data).toEqual({one: 1, two: 2});
 //   })
 // })
-
 
 // (4)布尔值匹配器
 /**
@@ -77,7 +73,6 @@ import {add,del} from '@/components/test1.js'
 //   expect(z).toBeFalsy();
 // });
 
-
 // (5)数字匹配器
 /**
  * .toBeGreaterThan() - 大于
@@ -86,7 +81,7 @@ import {add,del} from '@/components/test1.js'
  * .toBeLessThanOrEqual() - 小于等于
  * .toBeCloseTo() - 浮点数比较
  */
- 
+
 // it('大于',()=>{
 //   expect(6).toBeGreaterThan(5)
 // })
@@ -103,23 +98,17 @@ import {add,del} from '@/components/test1.js'
 //   expect(1.2).toBeCloseTo(1.21)
 // })
 
-
 // (6)数组匹配器
 /**
  * .toContain(item) - 判断数组是否包含特定子项
  * .toContainEqual(item) - 判断数组中是否包含一个特定对象
  */
 
-it('判断数组是否包含特定子项',()=>{
-  expect([1,2,3]).toContain(1)
+it('判断数组是否包含特定子项', () => {
+  expect([1, 2, 3]).toContain(1)
 })
-it('判断数组中是否包含一个特定对象',()=>{
-  expect([{ c: "c" }, { t: "t" }, { j: "j" }]).toContainEqual({ c: "c" })
+it('判断数组中是否包含一个特定对象', () => {
+  expect([{ c: 'c' }, { t: 't' }, { j: 'j' }]).toContainEqual({ c: 'c' })
 })
-
 
 // (7)对象匹配器 https://zhuanlan.zhihu.com/p/89515965
-
-
-
-
